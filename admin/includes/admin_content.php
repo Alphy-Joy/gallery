@@ -7,6 +7,17 @@
             Blank Page
             <small>Subheading</small>
         </h1>
+        <?php
+            //calling static functiom from User class
+            $result_set = User::get_all_users();
+            while($row =  mysqli_fetch_array($result_set))
+                {
+                    echo $row['first_name'];
+                }
+            $uname = User::get_user_by_id(2);
+            $user = User::instantiate($uname);
+            echo $user->id;
+        ?>
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
