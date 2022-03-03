@@ -9,11 +9,20 @@
         </h1>
         <?php
             //calling static functiom from User class
-            $result_set = User::get_all_users();
-            while($row =  mysqli_fetch_array($result_set))
-                {
-                    echo $row['first_name'];
-                }
+            //$result_set = User::get_all_users();
+            // while($row =  mysqli_fetch_array($result_set))
+            //     {
+            //         echo $row['first_name'];
+            //     }
+             $user = User::get_user_by_id(3);
+            // $user = User::instantiate($uname);
+             echo $user->first_name;
+
+            // $users = User::get_all_users();
+            // foreach($users as $user)
+            // {
+            //     echo $user->username."<br>";
+            // }
         ?>
         <ol class="breadcrumb">
             <li>
