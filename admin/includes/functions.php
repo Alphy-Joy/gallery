@@ -9,4 +9,9 @@ spl_autoload_register(function ($class){
         die("This file named" . $class . ".php was not found.");
     }
 });
+
+function redirect($location)
+{
+    header("Location: {$location}");
+}
 ?>
